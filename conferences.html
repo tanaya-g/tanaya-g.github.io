@@ -1,0 +1,68 @@
+---
+layout: default
+title : Conferences
+navbar_title: Conferences
+---
+
+{% assign conferences = site.conferences | sort: "date" | reverse %}
+
+<div class="row">
+    <div class="col-12 col-lg-10 mx-auto">
+        <h2 class="pt-4 mb-4">Conferences</h2>
+
+        {% if conferences.size > 0 %}
+        <div class="conference-timeline">
+            {% for item in conferences %}
+            <div class="conference-timeline-item">
+                <div class="conference-timeline-marker"></div>
+                <div class="conference-timeline-content bg-white shadow-sm">
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="conference-date no-break">
+                            {{ item.date | date: "%b %-d, %Y" }}
+                        </div>
+                        <div class="conference-details">
+                            <h5 class="mb-1">{{ item.conference }}</h5>
+                            {% if item.location %}
+                            <div class="text-muted mb-2">{{ item.location }}</div>
+                            {% endif %}
+                            <div class="conference-work-title">{{ item.work_title }}</div>
+                            {% if item.authors %}
+                            <div class="small text-muted mt-1">{{ item.authors }}</div>
+                            {% endif %}
+                            {% if item.content != "" %}
+                            <div class="conference-description mt-2">
+                                {{ item.content }}
+                            </div>
+                            {% endif %}
+                            {% if item.poster or item.slides or item.link %}
+                            <div class="conference-links mt-3">
+                                {% if item.poster %}
+                                <a class="btn btn-sm btn-outline-primary mr-2 mb-2" target="_blank" href="{{ item.poster | relative_url }}">
+                                    <i class="fas fa-image"></i> Poster
+                                </a>
+                                {% endif %}
+                                {% if item.slides %}
+                                <a class="btn btn-sm btn-outline-primary mr-2 mb-2" target="_blank" href="{{ item.slides | relative_url }}">
+                                    <i class="fas fa-file-powerpoint"></i> Slides
+                                </a>
+                                {% endif %}
+                                {% if item.link %}
+                                <a class="btn btn-sm btn-outline-secondary mr-2 mb-2" target="_blank" href="{{ item.link | relative_url }}">
+                                    <i class="fas fa-link"></i> Link
+                                </a>
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="bg-white shadow-sm rounded-xl p-4">
+            Add conference entries as Markdown files in <code>_conferences</code>.
+        </div>
+        {% endif %}
+    </div>
+</div>

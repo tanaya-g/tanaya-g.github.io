@@ -49,10 +49,69 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .inline-badge {
-    height: 16px;
+    height: 28px;
     vertical-align: -10%;
-    margin-right: 2px;
+    margin-right: 6px;
     line-break: unset;
+}
+
+.profile-list-logo {
+    width: 28px;
+}
+
+.conference-timeline {
+    position: relative;
+    padding-left: 24px;
+}
+
+.conference-timeline::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 7px;
+    width: 2px;
+    background: #dee2e6;
+}
+
+.conference-timeline-item {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.conference-timeline-marker {
+    position: absolute;
+    top: 1.25rem;
+    left: -24px;
+    width: 16px;
+    height: 16px;
+    border: 3px solid #007bff;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.conference-timeline-content {
+    border-radius: 0.8rem;
+    padding: 1.25rem;
+}
+
+.conference-date {
+    flex: 0 0 150px;
+    color: #6c757d;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.conference-details {
+    min-width: 0;
+}
+
+.conference-work-title {
+    font-weight: 700;
+}
+
+.conference-description p:last-child {
+    margin-bottom: 0;
 }
 
 .no-break {
