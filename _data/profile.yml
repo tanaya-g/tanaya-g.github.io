@@ -30,7 +30,7 @@ short_bio: >-
     as well as being common in domestic longhair and domestic shorthair cats.
   </p>
 
-portrait_url: /assets/images/photos/grg.jpg
+portrait_url: /assets/images/photos/grg.png
 portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
@@ -42,9 +42,9 @@ education:
     Ph.D. Student
   date: Aug. 2024 - present
 - name: University of Washington
-  logo: /assets/images/badges/University0of-Washington-Seal.png
+  logo: /assets/images/badges/University-of-Washington-Seal.png
   position: >-
-  M.S. in Applied & Computational Mathematics
+    M.S. in Applied & Computational Mathematics
   date: Sep. 2022 - Jun. 2023
 - name: University of California, Santa Barbara
   logo: /assets/images/badges/UC_Santa_Barbara_Seal.png
@@ -58,10 +58,7 @@ education:
 #   position: Research Intern
 #   date: Sep. 2019 - Jul. 2021
 
-awards:
-- name: Award Name 2
-  date: 2024
-- name: Award Name 1 
-  date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away award
-  date: 2021
+current roles:
+- name: Organizer, PaleoEnvironmental (P/E) Seminar
+  date: 2026-2027
+
