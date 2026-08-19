@@ -52,13 +52,15 @@ education:
     B.S. in Applied Mathematics; Minor in Earth Science
   date: Sep. 2018 - Mar. 2022
 
-# experience:
-# - name: Peking University
-#   logo: /assets/images/badges/PKU_red.png
-#   position: Research Intern
-#   date: Sep. 2019 - Jul. 2021
+experience:
+- name: PolArctic LLC 
+  logo: /assets/images/badges/PolArctic.webp
+  position: Operations Research Analyst
+  date: Sep. 2023 - Jul. 2024
+- name: University of Washington
+  logo: /assets/images/badges/University-of-Washington-Seal.png
+  position: Graduate Research Assistant
+  date: Mar. 2023 - Jun. 2023
 
-current roles:
-- name: Organizer, PaleoEnvironmental (P/E) Seminar
-  date: 2026-2027
+
 
