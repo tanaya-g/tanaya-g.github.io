@@ -2,20 +2,35 @@
 layout: default
 title : Conferences
 navbar_title: Conferences
+body_attr: >-
+  data-spy="scroll" data-target="#navbar-year" data-offset="100"
 ---
 
-{% assign conferences = site.conferences | sort: "date" | reverse %}
+{% assign conferences_by_year = site.conferences | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
 
 <div class="row">
-    <div class="col-12 col-lg-10 mx-auto">
-        <h2 class="pt-4 mb-4">Conferences</h2>
-
-        {% if conferences.size > 0 %}
+    <div class="col-12 col-lg-10">
+        {% if conferences_by_year.size > 0 %}
+        {% for year in conferences_by_year %}
+        <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
         <div class="conference-timeline">
-            {% for item in conferences %}
+            {% for item in year.items %}
+            {% assign color_mod = forloop.index0 | modulo: 5 %}
+            {% case color_mod %}
+                {% when 0 %}
+                    {% assign card_color_class = "rotating-card-green" %}
+                {% when 1 %}
+                    {% assign card_color_class = "rotating-card-pink" %}
+                {% when 2 %}
+                    {% assign card_color_class = "rotating-card-periwinkle" %}
+                {% when 3 %}
+                    {% assign card_color_class = "rotating-card-aquamarine" %}
+                {% else %}
+                    {% assign card_color_class = "rotating-card-blue" %}
+            {% endcase %}
             <div class="conference-timeline-item">
                 <div class="conference-timeline-marker"></div>
-                <div class="conference-timeline-content bg-white shadow-sm">
+                <div class="conference-timeline-content rotating-card {{ card_color_class }} shadow-sm">
                     <div class="d-flex flex-column flex-md-row">
                         <div class="conference-date no-break">
                             {{ item.date | date: "%b %-d, %Y" }}
@@ -59,10 +74,19 @@ navbar_title: Conferences
             </div>
             {% endfor %}
         </div>
+        {% endfor %}
         {% else %}
         <div class="bg-white shadow-sm rounded-xl p-4">
             Add conference entries as Markdown files in <code>_conferences</code>.
         </div>
         {% endif %}
+    </div>
+
+    <div class="col-2 d-none d-lg-block">
+        <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
+            {% for year in conferences_by_year %}
+            <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
+            {% endfor %}
+        </div>
     </div>
 </div>
