@@ -8,7 +8,7 @@ date: 2020-01-12 00:01:00 +0800
     <ul class="list-unstyled mb-1">
         {% for item in site.data.profile.education %}
         <li class="media mb-1">
-            <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" class="profile-list-logo mr-1 mt-1">
+            <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" class="profile-list-logo {% if item.name == 'University of Washington' %}profile-list-logo-large{% endif %} mr-1 mt-1">
             <div class="media-body">
                 <div>{{ item.name }}</div>
                 <div class="small">{{ item.dept }}</div>

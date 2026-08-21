@@ -59,6 +59,10 @@ h1, h2, h3, h4, h5, h6,
     width: 28px;
 }
 
+.profile-list-logo-large {
+    width: 34px;
+}
+
 .rotating-card {
     color: #000;
 }
@@ -81,6 +85,50 @@ h1, h2, h3, h4, h5, h6,
 
 .rotating-card-blue {
     background-color: #77d4ff !important;
+}
+
+.publication-timeline {
+    position: relative;
+    padding-left: 24px;
+}
+
+.publication-timeline::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 7px;
+    width: 2px;
+    background: #dee2e6;
+}
+
+.publication-timeline-item {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.publication-timeline-marker {
+    position: absolute;
+    top: 1.25rem;
+    left: -24px;
+    width: 16px;
+    height: 16px;
+    border: 3px solid #007bff;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.publication-timeline-content {
+    border-radius: 0.8rem;
+    padding: 1.25rem;
+}
+
+.publication-figure img,
+.publication-figure svg {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
 }
 
 .conference-timeline {
