@@ -1,6 +1,6 @@
 ---
 conference: "AGU25"
-date: December, 2025
+date: 2025-12-15 8:00:00
 location: "New Orleans, LA"
 work_title: "Last Millennium Reanalysis: Sensitivity of Reconstructed Climate Fields to Enhanced Proxy Networks"
 authors: "Tanaya Gondhalekar"
