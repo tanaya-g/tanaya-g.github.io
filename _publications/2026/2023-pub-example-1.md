@@ -1,5 +1,5 @@
 ---
-title:          "Lorem ipsum: Dolor sit amet, consectetur adipiscing elit"
+title:          "I don't have any publications right now"
 date:           2023-01-05 00:01:00 +0800
 selected:       true
 pub:            "Nature Communications"
