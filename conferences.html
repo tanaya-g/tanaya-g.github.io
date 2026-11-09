@@ -39,6 +39,7 @@ body_attr: >-
                                 {% for abstract in item.abstracts %}
                                 <div class="conference-abstract-row">
                                     <div class="conference-abstract-title">{{ abstract.title }}</div>
+                                    <div class="conference-abstract-authors small text-muted">{{ abstract.authors }}</div>
                                     <div class="conference-abstract-actions">
                                         <span class="conference-poster-slot" aria-label="Poster not yet available">
                                             <i class="fas fa-image"></i> Poster

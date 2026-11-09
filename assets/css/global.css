@@ -461,10 +461,15 @@ footer.bg-white {
 }
 
 .conference-abstract-title {
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.2rem;
     color: var(--ink);
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.35;
+}
+
+.conference-abstract-authors {
+    margin-bottom: 0.7rem;
+    line-height: 1.4;
 }
 
 .conference-abstract-actions {
