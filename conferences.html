@@ -49,7 +49,7 @@ body_attr: >-
                                 {{ item.content }}
                             </div>
                             {% endif %}
-                            {% if item.poster or item.slides or item.link %}
+                            {% if item.poster or item.slides or item.link or item.links %}
                             <div class="conference-links mt-3">
                                 {% if item.poster %}
                                 <a class="btn btn-sm btn-outline-primary mr-2 mb-2" target="_blank" href="{{ item.poster | relative_url }}">
@@ -63,9 +63,14 @@ body_attr: >-
                                 {% endif %}
                                 {% if item.link %}
                                 <a class="btn btn-sm btn-outline-secondary mr-2 mb-2" target="_blank" href="{{ item.link | relative_url }}">
-                                    <i class="fas fa-link"></i> Link
+                                    <i class="fas fa-link"></i> Meeting
                                 </a>
                                 {% endif %}
+                                {% for conference_link in item.links %}
+                                <a class="btn btn-sm btn-outline-primary mr-2 mb-2" target="_blank" rel="noopener noreferrer" href="{{ conference_link.url }}">
+                                    <i class="fas fa-file-alt"></i> {{ conference_link.label }}
+                                </a>
+                                {% endfor %}
                             </div>
                             {% endif %}
                         </div>
