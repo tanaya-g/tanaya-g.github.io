@@ -5,7 +5,8 @@
         <a href="{{ 'publications' | relative_url }}">(view all <i class="fas fa-angle-double-right"></i>)</a>
     </h6>
     {% for item in publications limit:include.limit %}
-        {% include widgets/publication_item.html item=item first=false last=false %}    
+        {% capture card_color_class %}{% cycle home_publication_cards: 'rotating-card-green', 'rotating-card-pink', 'rotating-card-periwinkle', 'rotating-card-aquamarine', 'rotating-card-blue' %}{% endcapture %}
+        {% include widgets/publication_item.html item=item first=false last=false card_color_class=card_color_class %}
     {% endfor %}
     <h6 class="d-block p-3 mt-0 text-right">
         <a href="{{ 'publications' | relative_url }}">All publications <i class="fas fa-angle-double-right"></i></a>

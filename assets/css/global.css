@@ -401,6 +401,79 @@ footer.bg-white {
     text-decoration: none;
 }
 
+.project-strip {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    padding: 0.85rem 1rem;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid rgba(111, 121, 189, 0.42);
+    border-left: 5px solid var(--orchid);
+    border-radius: 0.8rem;
+    background: linear-gradient(100deg, #C9CDEA, #E6C6DE);
+    box-shadow: 0 0.4rem 1rem rgba(66, 69, 138, 0.13);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.project-strip:hover,
+.project-strip:focus {
+    color: var(--ink);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 0.7rem 1.4rem rgba(66, 69, 138, 0.2);
+}
+
+.project-strip-icon {
+    display: inline-flex;
+    width: 2.65rem;
+    height: 2.65rem;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 50%;
+    background-color: var(--indigo);
+}
+
+.project-strip-copy {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+}
+
+.project-strip-kicker {
+    color: var(--orchid);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.project-strip-title {
+    color: var(--indigo);
+    font-family: "Lato", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.project-strip-description {
+    font-size: 0.85rem;
+    line-height: 1.3;
+}
+
+.project-strip-arrow {
+    color: var(--indigo);
+}
+
+@media (max-width: 575.98px) {
+    .project-strip-description {
+        display: none;
+    }
+}
+
 .conference-details {
     min-width: 0;
 }
