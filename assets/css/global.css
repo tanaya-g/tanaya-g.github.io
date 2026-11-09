@@ -445,6 +445,49 @@ footer.bg-white {
     margin-bottom: 0;
 }
 
+.conference-abstract-list {
+    overflow: hidden;
+    border: 1px solid rgba(66, 69, 138, 0.22);
+    border-radius: 0.65rem;
+    background-color: rgba(248, 249, 252, 0.48);
+}
+
+.conference-abstract-row {
+    padding: 1rem;
+}
+
+.conference-abstract-row + .conference-abstract-row {
+    border-top: 1px solid rgba(66, 69, 138, 0.22);
+}
+
+.conference-abstract-title {
+    margin-bottom: 0.7rem;
+    color: var(--ink);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.conference-abstract-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+}
+
+.conference-poster-slot {
+    display: inline-flex;
+    min-width: 7.25rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.5rem;
+    color: #62658A;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border: 1px dashed #62658A;
+    border-radius: 0.2rem;
+    opacity: 0.75;
+}
+
 .no-break {
     white-space: nowrap;
 }

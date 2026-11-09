@@ -28,9 +28,28 @@ body_attr: >-
                             {% if item.location %}
                             <div class="text-muted mb-2">{{ item.location }}</div>
                             {% endif %}
+                            {% if item.work_title %}
                             <div class="conference-work-title">{{ item.work_title }}</div>
+                            {% endif %}
                             {% if item.authors %}
                             <div class="small text-muted mt-1">{{ item.authors }}</div>
+                            {% endif %}
+                            {% if item.abstracts %}
+                            <div class="conference-abstract-list mt-3">
+                                {% for abstract in item.abstracts %}
+                                <div class="conference-abstract-row">
+                                    <div class="conference-abstract-title">{{ abstract.title }}</div>
+                                    <div class="conference-abstract-actions">
+                                        <span class="conference-poster-slot" aria-label="Poster not yet available">
+                                            <i class="fas fa-image"></i> Poster
+                                        </span>
+                                        <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer" href="{{ abstract.url }}">
+                                            <i class="fas fa-file-alt"></i> Abstract
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
                             {% endif %}
                             {% if item.content != "" %}
                             <div class="conference-description mt-2">
