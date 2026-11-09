@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="title desc">
+  <title id="title">Reproducing LMRv2.1</title>
+  <desc id="desc">Proxy observations flow into a reconstructed climate field.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#42458A"/><stop offset="1" stop-color="#6F79BD"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#DBE2E9" stroke-opacity=".14"/></pattern>
+  </defs>
+  <rect width="800" height="420" rx="24" fill="url(#bg)"/>
+  <rect width="800" height="420" rx="24" fill="url(#grid)"/>
+  <g fill="none" stroke="#DBE2E9" stroke-width="5" stroke-linecap="round">
+    <path d="M82 292C180 185 246 328 338 218S516 112 716 190"/>
+    <path d="M82 320C196 245 248 358 356 270S554 176 716 238" opacity=".6"/>
+  </g>
+  <g fill="#B565A7" stroke="#F8F9FC" stroke-width="4"><circle cx="116" cy="263" r="12"/><circle cx="240" cy="287" r="12"/><circle cx="354" cy="201" r="12"/><circle cx="512" cy="139" r="12"/><circle cx="681" cy="179" r="12"/></g>
+  <text x="64" y="92" fill="#F8F9FC" font-family="Lato,Arial,sans-serif" font-size="42" font-weight="700">LMRv2.1</text>
+  <text x="64" y="136" fill="#DBE2E9" font-family="Fira Sans,Arial,sans-serif" font-size="22">proxy records → data assimilation → reconstruction</text>
+</svg>

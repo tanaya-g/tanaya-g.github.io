@@ -21,6 +21,11 @@ body.bg-light {
         linear-gradient(145deg, var(--mist) 0%, #EEF0F6 48%, #D8D5E6 100%) fixed !important;
 }
 
+body.interior-page,
+body.interior-page.bg-light {
+    background: var(--mist) !important;
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Lato", sans-serif;
@@ -156,7 +161,7 @@ a:focus {
 }
 
 .rotating-card-green {
-    background-color: var(--mist) !important;
+    background-color: #C8D2E8 !important;
 }
 
 .rotating-card-pink {
@@ -168,11 +173,11 @@ a:focus {
 }
 
 .rotating-card-aquamarine {
-    background-color: #D8D5E6 !important;
+    background-color: #D7B9D6 !important;
 }
 
 .rotating-card-blue {
-    background-color: var(--lavender) !important;
+    background-color: #AAAED6 !important;
 }
 
 .publication-timeline {
@@ -316,12 +321,13 @@ footer.bg-white {
 
 .blog-article {
     border: 1px solid var(--lavender);
+    background-color: #E6E3F0 !important;
 }
 
 .project-hero {
     padding: clamp(1.5rem, 4vw, 3rem);
     border-left: 6px solid var(--orchid);
-    background: linear-gradient(135deg, rgba(248, 249, 252, 0.96), rgba(219, 226, 233, 0.94));
+    background: linear-gradient(135deg, #C9CDEA, #E6C6DE);
 }
 
 .project-eyebrow {
@@ -331,59 +337,34 @@ footer.bg-white {
     text-transform: uppercase;
 }
 
-.paleobook-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.25rem;
-}
-
 .paleobook-card {
-    display: flex;
-    min-height: 100%;
-    flex-direction: column;
-    overflow: hidden;
-    color: var(--ink);
-    text-decoration: none;
-    border: 1px solid rgba(111, 121, 189, 0.35);
-    border-top: 5px solid var(--periwinkle);
-    border-radius: 0.8rem;
-    background-color: var(--paper);
+    position: relative;
+    border: 0 !important;
+    border-top: 5px solid var(--periwinkle) !important;
     box-shadow: 0 0.5rem 1.25rem rgba(66, 69, 138, 0.13);
     transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
-.paleobook-card:nth-child(2) {
-    border-top-color: var(--orchid);
+.paleobook-card-one {
+    background-color: #C9CDEA !important;
+}
+
+.paleobook-card-two {
+    border-top-color: var(--orchid) !important;
+    background-color: #E6C6DE !important;
 }
 
 .paleobook-card:hover,
 .paleobook-card:focus {
-    color: var(--ink);
-    text-decoration: none;
     transform: translateY(-4px);
-    border-color: var(--orchid);
     box-shadow: 0 0.9rem 1.8rem rgba(66, 69, 138, 0.22);
 }
 
-.paleobook-card-banner {
-    display: flex;
-    min-height: 9rem;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    background:
-        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.24), transparent 30%),
-        linear-gradient(135deg, var(--indigo), var(--periwinkle));
-}
-
-.paleobook-card:nth-child(2) .paleobook-card-banner {
-    background:
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.22), transparent 30%),
-        linear-gradient(135deg, var(--indigo), var(--orchid));
-}
-
-.paleobook-card-banner .fas {
-    font-size: 3rem;
+.paleobook-thumbnail {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(66, 69, 138, 0.18);
 }
 
 .paleobook-card-body {
@@ -411,12 +392,13 @@ footer.bg-white {
     padding-top: 0.75rem;
     color: var(--indigo);
     font-weight: 700;
+    text-decoration: none;
 }
 
-@media (max-width: 767.98px) {
-    .paleobook-grid {
-        grid-template-columns: 1fr;
-    }
+.paleobook-open:hover,
+.paleobook-open:focus {
+    color: var(--orchid);
+    text-decoration: none;
 }
 
 .conference-details {

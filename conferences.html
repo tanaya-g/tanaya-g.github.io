@@ -7,6 +7,7 @@ body_attr: >-
 ---
 
 {% assign conferences_by_year = site.conferences | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
+{% assign conference_color_index = 0 %}
 
 <div class="row">
     <div class="col-12 col-lg-10">
@@ -15,7 +16,7 @@ body_attr: >-
         <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
         <div class="conference-timeline">
             {% for item in year.items %}
-            {% assign color_mod = forloop.index0 | modulo: 5 %}
+            {% assign color_mod = conference_color_index | modulo: 5 %}
             {% case color_mod %}
                 {% when 0 %}
                     {% assign card_color_class = "rotating-card-green" %}
@@ -77,6 +78,7 @@ body_attr: >-
                     </div>
                 </div>
             </div>
+            {% assign conference_color_index = conference_color_index | plus: 1 %}
             {% endfor %}
         </div>
         {% endfor %}
