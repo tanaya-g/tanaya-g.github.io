@@ -99,6 +99,27 @@ a:focus {
     color: #fff;
 }
 
+.dropdown-menu {
+    padding: 0.45rem;
+    border: 1px solid var(--lavender);
+    border-radius: 0.7rem;
+    background-color: var(--paper);
+    box-shadow: 0 0.75rem 1.5rem rgba(66, 69, 138, 0.18);
+}
+
+.dropdown-item {
+    color: var(--indigo);
+    border-radius: 0.45rem;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #fff;
+    background-color: var(--periwinkle);
+}
+
 .inline-badge {
     height: 28px;
     vertical-align: -10%;
@@ -295,6 +316,107 @@ footer.bg-white {
 
 .blog-article {
     border: 1px solid var(--lavender);
+}
+
+.project-hero {
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border-left: 6px solid var(--orchid);
+    background: linear-gradient(135deg, rgba(248, 249, 252, 0.96), rgba(219, 226, 233, 0.94));
+}
+
+.project-eyebrow {
+    color: var(--orchid);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.paleobook-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.paleobook-card {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid rgba(111, 121, 189, 0.35);
+    border-top: 5px solid var(--periwinkle);
+    border-radius: 0.8rem;
+    background-color: var(--paper);
+    box-shadow: 0 0.5rem 1.25rem rgba(66, 69, 138, 0.13);
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.paleobook-card:nth-child(2) {
+    border-top-color: var(--orchid);
+}
+
+.paleobook-card:hover,
+.paleobook-card:focus {
+    color: var(--ink);
+    text-decoration: none;
+    transform: translateY(-4px);
+    border-color: var(--orchid);
+    box-shadow: 0 0.9rem 1.8rem rgba(66, 69, 138, 0.22);
+}
+
+.paleobook-card-banner {
+    display: flex;
+    min-height: 9rem;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.24), transparent 30%),
+        linear-gradient(135deg, var(--indigo), var(--periwinkle));
+}
+
+.paleobook-card:nth-child(2) .paleobook-card-banner {
+    background:
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.22), transparent 30%),
+        linear-gradient(135deg, var(--indigo), var(--orchid));
+}
+
+.paleobook-card-banner .fas {
+    font-size: 3rem;
+}
+
+.paleobook-card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.35rem;
+}
+
+.paleobook-label {
+    align-self: flex-start;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem 0.6rem;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    background-color: var(--orchid);
+}
+
+.paleobook-open {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    color: var(--indigo);
+    font-weight: 700;
+}
+
+@media (max-width: 767.98px) {
+    .paleobook-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .conference-details {
