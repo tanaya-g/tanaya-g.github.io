@@ -393,6 +393,30 @@ footer.bg-white {
     background-color: var(--orchid);
 }
 
+.sedpsm-diagram-card {
+    background-color: #E6C6DE !important;
+}
+
+.sedpsm-diagram-link {
+    display: block;
+    overflow: hidden;
+    border: 1px solid rgba(66, 69, 138, 0.2);
+    border-radius: 0.65rem;
+    background-color: #fff;
+}
+
+.sedpsm-diagram {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 180ms ease;
+}
+
+.sedpsm-diagram-link:hover .sedpsm-diagram,
+.sedpsm-diagram-link:focus .sedpsm-diagram {
+    transform: scale(1.01);
+}
+
 .paleobook-card {
     position: relative;
     border: 0 !important;
