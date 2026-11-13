@@ -5,7 +5,9 @@ location: "New Orleans, LA"
 work_title: "Last Millennium Reanalysis: Sensitivity of Reconstructed Climate Fields to Enhanced Proxy Networks"
 authors: "Tanaya Gondhalekar"
 poster: /assets/files/AGU25_Tanaya_Final.pdf
-link: https://studio.m-anage.com/agu/agu25/meetingapp.cgi/Paper/1865857
+links:
+  - label: "Abstract"
+    url: https://studio.m-anage.com/agu/agu25/meetingapp.cgi/Paper/1865857
 ---
 
 My first AGU!
