@@ -325,9 +325,29 @@ footer.bg-white {
 }
 
 .project-hero {
+    position: relative;
+    overflow: hidden;
     padding: clamp(1.5rem, 4vw, 3rem);
     border-left: 6px solid var(--orchid);
     background: linear-gradient(135deg, #C9CDEA, #E6C6DE);
+}
+
+.project-hero-watermark {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.08;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    user-select: none;
+}
+
+.project-hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .project-eyebrow {
