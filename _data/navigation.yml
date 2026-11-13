@@ -7,6 +7,8 @@ pages:
   children:
     - name: Last Millennium Reanalysis
       url: /projects/last-millennium-reanalysis/
+    - name: sedPSM
+      url: /projects/sedpsm/
 - name: Conferences
   url: /conferences
 - name: Publications
