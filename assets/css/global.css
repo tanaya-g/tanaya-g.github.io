@@ -362,9 +362,6 @@ footer.bg-white {
 }
 
 .sedpsm-card {
-    max-width: 860px;
-    margin-right: auto;
-    margin-left: auto;
     background-color: #C9CDEA !important;
 }
 
@@ -399,6 +396,7 @@ footer.bg-white {
 
 .sedpsm-diagram-link {
     display: block;
+    height: 310px;
     overflow: hidden;
     border: 1px solid rgba(66, 69, 138, 0.2);
     border-radius: 0.65rem;
@@ -408,13 +406,24 @@ footer.bg-white {
 .sedpsm-diagram {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
     transition: transform 180ms ease;
 }
 
 .sedpsm-diagram-link:hover .sedpsm-diagram,
 .sedpsm-diagram-link:focus .sedpsm-diagram {
     transform: scale(1.01);
+}
+
+@media (max-width: 991.98px) {
+    .sedpsm-diagram-link {
+        height: auto;
+    }
+
+    .sedpsm-diagram {
+        height: auto;
+    }
 }
 
 .paleobook-card {

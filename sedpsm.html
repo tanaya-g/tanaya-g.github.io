@@ -12,46 +12,48 @@ permalink: /projects/sedpsm/
     <p class="lead mb-0">A stage-separable marine sediment proxy system model.</p>
 </section>
 
-<section aria-labelledby="sedpsm-status-heading">
-    <article class="card sedpsm-card border-0 shadow-sm">
-        <div class="card-body p-4 p-md-5">
-            <div class="d-flex flex-column flex-md-row align-items-md-start">
-                <span class="sedpsm-icon mb-3 mb-md-0 mr-md-4" aria-hidden="true">
-                    <i class="fab fa-github"></i>
-                </span>
-                <div class="flex-grow-1">
-                    <span class="sedpsm-status">In development</span>
-                    <h2 id="sedpsm-status-heading" class="h3 mt-3 mb-2">More to come</h2>
-                    <p class="mb-4">
-                        The repository is currently private while the project is under active development.
-                        Documentation, examples, and additional project details will be added here as they become available.
-                    </p>
+<div class="row align-items-stretch">
+    <section class="col-lg-6 mb-4" aria-labelledby="sedpsm-status-heading">
+        <article class="card sedpsm-card border-0 shadow-sm h-100">
+            <div class="card-body p-4 d-flex flex-column">
+                <div class="d-flex flex-column flex-sm-row align-items-sm-start">
+                    <span class="sedpsm-icon mb-3 mb-sm-0 mr-sm-3" aria-hidden="true">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <div class="flex-grow-1">
+                        <span class="sedpsm-status">In development</span>
+                        <h2 id="sedpsm-status-heading" class="h3 mt-3 mb-2">More to come</h2>
+                        <p class="mb-4">
+                            The repository is currently private while the project is under active development.
+                            Documentation, examples, and additional project details will be added here as they become available.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-auto">
                     <a class="btn btn-primary" href="https://github.com/paleoDA/SedPSM" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-github mr-1"></i> View repository
                     </a>
                     <div class="small text-muted mt-2">GitHub access is limited to repository collaborators for now.</div>
                 </div>
             </div>
-        </div>
-    </article>
-</section>
+        </article>
+    </section>
 
-<section class="mt-4" aria-labelledby="sedpsm-architecture-heading">
-    <article class="card sedpsm-diagram-card border-0 shadow-sm">
-        <div class="card-body p-4">
-            <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-3">
+    <section class="col-lg-6 mb-4" aria-labelledby="sedpsm-architecture-heading">
+        <article class="card sedpsm-diagram-card border-0 shadow-sm h-100">
+            <div class="card-body p-4 d-flex flex-column">
                 <div>
                     <div class="project-eyebrow small mb-1">Software design</div>
                     <h2 id="sedpsm-architecture-heading" class="h3 mb-0">User API architecture</h2>
                 </div>
-                <span class="small text-muted mt-2 mt-md-0">Click the diagram to view it full size.</span>
+                <span class="small text-muted mt-1 mb-3">Click the diagram to view it full size.</span>
+                <a class="sedpsm-diagram-link" href="{{ '/assets/images/projects/sedpsm-user-api.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Open the sedPSM User API architecture diagram full size">
+                    <img class="sedpsm-diagram img-fluid" src="{{ '/assets/images/projects/sedpsm-user-api.png' | relative_url }}" alt="sedPSM User API architecture showing Climate, Sensor, Archive, Observation, Age Model, MultipleRecord, Record, supporting modules, methods, and data flow">
+                </a>
+                <p class="small text-muted mt-3 mb-0">
+                    Current high-level organization of the sedPSM user API, model components, record objects, and supporting methods.
+                </p>
             </div>
-            <a class="sedpsm-diagram-link" href="{{ '/assets/images/projects/sedpsm-user-api.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Open the sedPSM User API architecture diagram full size">
-                <img class="sedpsm-diagram img-fluid" src="{{ '/assets/images/projects/sedpsm-user-api.png' | relative_url }}" alt="sedPSM User API architecture showing Climate, Sensor, Archive, Observation, Age Model, MultipleRecord, Record, supporting modules, methods, and data flow">
-            </a>
-            <p class="small text-muted mt-3 mb-0">
-                Current high-level organization of the sedPSM user API, model components, record objects, and supporting methods.
-            </p>
-        </div>
-    </article>
-</section>
+        </article>
+    </section>
+</div>
